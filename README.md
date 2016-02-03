@@ -8,3 +8,5 @@ Note: Before you get started you will need to install <a href="https://nodejs.or
 3. When all of that is installed, you can run the commands "grunt" or "grunt build". The build on minimizes all the css and javascript.
 
 Please create an issue <a href="https://github.com/francdore/materialize-boilerplate/issues">here</a> if you need any help.
+
+Thanks
