@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/styles.min.css" media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                                <label for="disabled">Disabled</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" required="required" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="checkbox" id="test5" />
+                                <label for="test5">Red</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="checkbox" id="test6" checked="checked" />
+                                <label for="test6">Yellow</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                                <label for="filled-in-box">Filled in</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+                                <label for="test7">Green</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="checkbox" id="test8" disabled="disabled" />
+                                <label for="test8">Brown</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="switch col s12">
+                                <label>
+                                    Off
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="parallax-container">
+                        <div class="parallax">
+                            <img src="images/action.jpg">
+                        </div>
+                    </div>
+                    <div class="section white">
+                        <div class="row container">
+                            <h2 class="header">Parallax</h2>
+                            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+                        </div>
+                    </div>
+                    <div class="parallax-container">
+                        <div class="parallax">
+                            <img src="images/architectural.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <table class="highlight">
+                        <thead>
+                            <tr>
+                                <th data-field="id">Name</th>
+                                <th data-field="name">Item Name</th>
+                                <th data-field="price">Item Price</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>$3.76</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>$7.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/scripts.min.js"></script>
+        <script type="text/javascript" src="js/app.min.js"></script>
+    </body>
+</html>
