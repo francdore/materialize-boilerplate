@@ -21,27 +21,19 @@ module.exports = function(grunt) {
                 }
             }
         },
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: './src/images/',
-                    src: ['**/*.{png,jpg,gif,svg}'],
-                    dest: 'images/'
-                }]
-            }
-        },
-        copy: {
-            fonts: {
-                expand: true,
-                dot: true,
-                cwd: './src/fonts/',
-                src: [
-                    '**/*'
-                ],
-                dest: './fonts/'
-            }
-        },
+        // tinypng: {
+        //     options: {
+        //         apiKey: "aYeK_cO-ELfv1gaipjugrCyl21y3rBsM",
+        //         summarize: true,
+        //         showProgress: true,
+        //         stopOnImageError: false
+        //     },
+        //     compress: {
+        //         files: {
+        //           'images/': 'src/images/'
+        //         }
+        //     },
+        // },
         concat: {
             basic: {
                 src: [
@@ -99,14 +91,6 @@ module.exports = function(grunt) {
                 files: ['./src/sass/**/*'],
                 tasks: ['sass', 'cssmin', 'clean']
             },
-            imagemin: {
-                files: ['./src/images/**/*.{png,jpg,gif}'],
-                tasks: ['imagemin']
-            },
-            fonts: {
-                files: ['./src/fonts/**/*'],
-                tasks: ['copy']
-            },
             concat: {
                 files: ['./src/js/app.js'],
                 tasks: ['concat', 'uglify', 'clean']
@@ -120,11 +104,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    // grunt.loadNpmTasks('grunt-tinypng');
 
     // Tasks
-    grunt.registerTask('default', ['sass', 'copy', 'concat', 'cssmin:production', 'uglify', 'copy:fonts', 'clean', 'watch']);
-    grunt.registerTask('build', ['sass', 'copy', 'concat', 'uglify', 'cssmin:production', 'clean', 'watch']);
+    grunt.registerTask('default', ['sass', 'concat', 'cssmin:production', 'uglify', 'clean', 'watch']);
+    grunt.registerTask('build', ['sass', 'concat', 'uglify', 'cssmin:production', 'clean', 'watch']);
 };
